@@ -1,0 +1,17 @@
+PID,Day,placename,schedule,lat,lng,altitude
+00000,1,Lukla,An early morning to Lukla from Kathmandu and trek to Phakding.,27.6856603,86.7278059,2782.93261719
+00001,2,Phakding,Trek to Namche Bazaar (3440m/11286ft). walking 5:30 hours. O/N at guest house. (B L D Plan),27.7400403,86.7125552,2632.95678711
+00002,3,Namche Bazaar,Acclimatization day at Namche Bazzar. walking 5 hours  O/N at guest house. (B L D Plan).,27.8068745,86.7139704,3607.90136719
+00003,4,Namche Bazzar,Trek to Tengboche (3860m/12664ft). walking 5 hours. O/N at guest house. (B L D Plan).,27.8068745,86.7139704,3607.90136719
+00004,5,Tengboche,Trek to Dingboche (4410m/14468ft). walking 5:30 hours,27.8362421,86.7645765,3855.02001953
+00005,6,Dingboche,Acclimatization day at Dinbuche. walking 4:25 hours,27.8923026,86.8314469,4316.79882812
+00006,7,Dingboche,Trek to Lobuje (4910m/16108ft). walking 5:30 hours,27.8923026,86.8314469,4316.79882812
+00007,8,Everest Base Camp,"Trek to Everest Base Camp (5363m/17595ft) and back to Gorekshep (5153m/16906ft). walking 7:30 hours, O/N at guest house. (B L D Plan).",28.0025862,86.8527603,5297.74902344
+00008,8,Gorak Shep Khumjung,"Trek to Everest Base Camp (5363m/17595ft) and back to Gorekshep (5153m/16906ft). walking 7:30 hours, O/N at guest house. (B L D Plan).",27.9807966,86.8289208,5163.96191406
+00009,9,Kala Patthar,Hiking up Kalapathar (5545m/18192ft) and overnight at Zongla (4710m/15453ft). Walking 6 hours. O/N at guest house. (B L D Plan).,27.9833333,86.8166667,5203.3125
+00010,10,Cho La Pass Khumjung,Trek to Thagna (4500m/14764ft) via the Chola-la cross(5420m/17782ft). Walking 7:30 hours,27.9617906,86.7517048,5366.76660156
+00011,11,Gokyo,Trek to Gokyo (4790m/15715ft). walking 4:30 hours,27.953468,86.6944684,4757.74951172
+00012,12,Gokyo Ri,Hiking upto Gokyo Ri (5483m/1983ft) and trek down Marhhermo,27.9608221,86.6810989,5219.82128906
+00013,13,Namche Bazzar,Trek to Namche Bazaar (3440m/11286ft). Walking 5 hours,27.8068745,86.7139704,3607.90136719
+00014,14,Lukula,Trek down to Lukla (2804m/8490ft) walking 6:30 hours,27.6856603,86.7278059,2782.93261719
+00015,15,Kathmandu, An early morning flight back to Kathmandu from Lukla and transfer to the hotel at 3 stars level,27.7172453,85.3239605,1301.60205078

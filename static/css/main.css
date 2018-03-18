@@ -1,0 +1,131 @@
+
+body{
+    text-align: left;
+    background-color: #F5F5F5;
+}
+
+* {
+   font-size: 20px;
+   line-height: 1.428;
+}
+
+h1.title{
+    font-size: 40px;
+    text-align: center;
+}
+#section_map
+{
+   float:left;
+   width: 40%;
+   margin-top: 1%;
+   margin-left: 1.5%;
+   margin-right: 1.5%;
+}
+#section_description
+{
+   float:left;
+   width: 45%;
+   /*color: #00008B;
+   border-style: solid;
+   border-width: 2px 2px 2px 2px;*/
+   margin-right: 1.5%;
+   margin-left: 0%;
+
+   background-color:#FFFFFF;
+}
+#section_tab
+{
+   float:right;
+   width: 7.5%;
+   /*color: #00008B;
+   border-style: solid;
+   border-width: 2px 2px 2px 2px;*/
+   margin-right: 0.5%;
+   background-color:#FFFFFF;
+}
+#section_trace
+{
+   text-align: left;
+   float:left;
+   width: 89%;
+   height: 230px;
+   /*color: #00008B;
+   border-style: solid;
+   border-width: 2px 2px 2px 2px;*/
+   background-color:#FFFFFF;
+   border-style: solid;
+   border-width: 5px 5px 5px 5px;
+   margin-left: 1.5%;
+   margin-right: 1.5%;
+   margin-top: 0.5%;
+}
+
+
+#li.tab
+{
+       font-size: 4px;
+}
+#map {
+        height: 500px;
+        width: 100%;
+        border-style: solid;
+        border-width: 5px 5px 5px 5px;
+         overflow:visible;
+
+}
+
+
+
+
+
+input[type="text"]
+{
+    font-size:24px;
+}
+
+mytitle{
+    font-family: 'Comic Sans MS', cursive;
+    font-weight: normal;
+    color: #FF4500;
+    font-size: 2.0em;
+}
+
+
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
