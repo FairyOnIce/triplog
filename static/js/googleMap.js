@@ -87,6 +87,7 @@ function initialize(mytrip, mytrip_item) {
             // description about the destination of the day
             // 0th element contains the starting point info, 1st element contains destination info
             add_content_to_subsection(mytrip,1)
+            get_myChart(mytrip_item[  0 ]);
         }else{
            //  If mytrip contains all days..
             document.getElementById("subsection_content").innerHTML = "<h2>Click markers in google map to see the planned route of the day</h2>"
@@ -132,14 +133,16 @@ function initialize(mytrip, mytrip_item) {
 function get_myChart(mytrip){
 
     d = []
-    console.log(mytrip.altitude)
+    console.log("inside get_myChart")
+    console.log(mytrip)
+    var x = 0;
     for (key_alt in mytrip.altitude){
         if (mytrip.distance != undefined){
             x = mytrip.distance[key_alt];
         }else{
             x = key_alt
         }
-        d.push({x: key_alt,
+        d.push({x: x,
                 y:mytrip.altitude[key_alt]})
     }
     console.log(d)
@@ -149,7 +152,7 @@ function get_myChart(mytrip){
         type: 'line',
         data: {
         datasets: [{
-            label: 'Altitude change (m)',
+            label: 'Altitude (m)',
             data: d
         }]},
         options: {
