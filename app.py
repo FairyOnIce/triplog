@@ -36,7 +36,7 @@ def index():
                            mytrip=mytrip,
                            mytrip_items=mytrip_items)
 @app.route("/ebc")
-def index():
+def index_ebc():
     return render_template("ebc.html",
                            maxPIDm1=maxPIDm1,
                            mytrip=mytrip,
