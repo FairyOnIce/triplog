@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 {% block body %}
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
 <div class="container">
     <div class="row">
         <div class="col-sm-6">
@@ -26,7 +27,8 @@
             <div class="col-sm-12">
                 <br>
                 <br>
-                <p id="plot_trace"></p>
+                <!--<p id="plot_trace"></p>-->
+                <canvas id="myChart" width="400" height="400"></canvas>
             </div>
         </div>
     </div>
@@ -37,25 +39,12 @@
   <p>Footer Text</p>
 </footer>
 
+
+
 <script>
-function openCity(evt, tab) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
 
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(tab).style.display = "block";
-    evt.currentTarget.className += " active";
-
-}
+myChart = get_myChart()
 </script>
-
-
 
 <!--read in GoogleMap
 This line needs to come right befor initMap defenition
@@ -70,8 +59,8 @@ function initMap(){
 };
 
 
-data = get_trace(mytrip);
-Plotly.newPlot('plot_trace', data["trace"],data["layout"]);
+//data = get_trace(mytrip);
+//Plotly.newPlot('plot_trace', data["trace"],data["layout"]);
 </script>
 
 

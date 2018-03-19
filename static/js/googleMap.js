@@ -129,55 +129,44 @@ function initialize(mytrip, mytrip_item) {
 };
 
 
-function get_trace(mytrip){
-    var x, xlabel;
-    if (mytrip.distance != undefined){
-        x = Object.values(mytrip.distance);
-        xlabel = "Distance (km)";
-    }else{
-        x = Object.keys(mytrip.altitude);
-        xlabel = "Day"
-    }
 
-    var trace1 = {
-      x: x,
-      y: Object.values(mytrip.altitude),
-      type: 'scatter',
-      text: Object.values(mytrip.placename),
-      mode: 'lines+markers+text',
-      name: 'trace from Google Map'
-    };
-
-    data = {
-        "trace":[trace1],
-        "layout": {
-        autosize: true,
-        height: 200,
-        title:"Altitude changes",
-        margin: {l: 100,r: 100,b: 50,t: 30,pad: 0},
-        annotations: [{
-          xref: 'paper',
-          yref: 'paper',
-          x: 0,
-          xanchor: 'right',
-          y: 1,
-          yanchor: 'bottom',
-          text: 'Altitude (m)',
-          showarrow: false
-            }, {
-          xref: 'paper',
-          yref: 'paper',
-          x: 1,
-          xanchor: 'left',
-          y: 0,
-          yanchor: 'top',
-          text: xlabel,
-          showarrow: false
+function get_myChart(){
+var ctx = document.getElementById("myChart").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
         }]
-        //paper_bgcolor: '#7f7f7f',
-        //plot_bgcolor: '#c7c7c7'
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
         }
-    };
-    return data;
-};
-
+    }
+});
+return myChart
+}
