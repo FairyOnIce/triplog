@@ -25,7 +25,7 @@ maxPIDm1 = len(mytrip["PID"]) - 1
 ## Out[87]: ['placename', 'schedule', 'altitude', 'PID', 'lat', 'lng', 'Day']
 ##
 ## mytrip_items.keys()
-## Out[88]: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+## Out[88]: [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 ## mytrip_items[0].keys()
 ## Out[89]: ['distance', 'placename', 'altitude', 'lat', 'duration', 'lng']
 
@@ -43,12 +43,22 @@ def tab_page():
 
 @app.route("/ebc/out/<string:pid>")
 def index_with_specific_marker(pid):
+    ## pid must be greater than 0
+    ## pid=1,2,...
     pid = int(pid)
     mt = {}
-    for key in mytrip.keys():
-         mt[key] =  [mytrip[key][pid],mytrip[key][pid+1]]
+    ## mytrip.keys() contains PID starting from 0, 1, 2,.. len(mytrip.keys())
+    ## 0^th PID is ignored
+    print(pid)
+    for key in mytrip.keys(): ## key goes over distance, placename,,
+        mt[key] =  [mytrip[key][pid-1], ## pid > 0
+                    mytrip[key][pid]]
+        print("here")
+        print(key,pid)
+        print(mytrip[key])
     mt["PID"] = 0
     mti = {"0":mytrip_items[pid]}
+    print(mti)
     return render_template("ebc.html",
                            maxPIDm1=maxPIDm1,
                            mytrip=mt,

@@ -147,6 +147,10 @@ if __name__ == '__main__':
 
     dir_data = 'static/data/'
     file = pd.read_csv(dir_data + "/mytrip.csv")
+    ## mytrip.csv :
+    ## placename column contains integer starting from 0,1,...
+    ## placename of i^th Day is the destination of the i^th Day
+
     ## define mytrip object
     mytrip = Trip()
     for irow in range(file.shape[0]):
@@ -162,7 +166,7 @@ if __name__ == '__main__':
 
     for start, end in zip(mytrip.points[:-1],mytrip.points[1:]):
         info = get_path_and_altitutde(start,end)
-        start.add_path(info)
+        end.add_path(info)
 
 
     for i in range(len(mytrip.points)):
@@ -172,7 +176,10 @@ if __name__ == '__main__':
     ## create a csv containing
     ## ID placename, description, latitude, lontitude, altitude
     text = []
-
+    ## enumerate starts from 1 because 0^th day only contain starting date
+    ## mytrip_00003.txt contains the 3rd date path
+    ## mytrip.points[3] contains the destination of the 3rd date
+    ## PID starts from 1
     for pid,point in enumerate(mytrip.points):
         pid_string = "{:05.0f}".format(pid)
         text.append([pid_string,
@@ -182,6 +189,7 @@ if __name__ == '__main__':
                      point.latlng[0],
                      point.latlng[1],
                      point.altitude])
+        ## point.path2next is None for the mytrip.points[0]
         if point.path2next is not None:
             pd.DataFrame(point.path2next).to_csv(dir_data + "/mytrip_item/mytrip_"+pid_string+".csv",
                                              index=False)

@@ -46,6 +46,16 @@ function initialize(mytrip, mytrip_item) {
 
         var position = new google.maps.LatLng(mytrip.lat[i], mytrip.lng[i]);
         bounds.extend(position);
+
+
+        if (bounds.getNorthEast().equals(bounds.getSouthWest())) {
+            var extendPoint1 = new google.maps.LatLng(bounds.getNorthEast().lat() + 0.01,
+                                                     bounds.getNorthEast().lng() + 0.01);
+            bounds.extend(extendPoint1);
+
+        }
+
+
         marker = new google.maps.Marker({
             position: position,
             map: map,
@@ -62,12 +72,12 @@ function initialize(mytrip, mytrip_item) {
                 infoWindow.setContent(text);
                 infoWindow.open(map, marker);
                 map.setCenter(marker.getPosition());
-                map.setZoom(10);
+
 
                 add_content_to_subsection(mytrip,i)
 
-                // trace
-                data = get_trace(mytrip_item[ mytrip.PID[i] ]);
+                // trace i starts from 0 in java script
+                data = get_trace(mytrip_item[ mytrip.PID[i+1] ]);
                 Plotly.newPlot('plot_trace', data["trace"],data["layout"]);
 
             }
@@ -75,13 +85,16 @@ function initialize(mytrip, mytrip_item) {
 
         if ( (Object.keys(mytrip_items)).length == 1){
             // There is only a single item if mytrip contains only a single day info:
-            add_content_to_subsection(mytrip,0)
+            // description about the destination of the day
+            // 0th element contains the starting point info, 1st element contains destination info
+            add_content_to_subsection(mytrip,1)
         }else{
            //  If mytrip contains all days..
             document.getElementById("subsection_content").innerHTML = "<h2>Click markers in google map to see the planned route of the day</h2>"
         }
         // Automatically center the map fitting all markers on the screen
         map.fitBounds(bounds);
+
     }
 
     llatlng = [];
@@ -104,9 +117,11 @@ function initialize(mytrip, mytrip_item) {
 
 
 
+
+
     // Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
     var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
-        this.setZoom(14);
+        this.setZoom(6);
         google.maps.event.removeListener(boundsListener);
     });
     google.maps.event.trigger(map, 'resize');
