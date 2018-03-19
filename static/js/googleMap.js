@@ -75,7 +75,7 @@ function initialize(mytrip, mytrip_item) {
 
         if ( (Object.keys(mytrip_items)).length == 1){
             // There is only a single item if mytrip contains only a single day info:
-            add_content_to_subsection(mytrip,i)
+            add_content_to_subsection(mytrip,0)
         }else{
            //  If mytrip contains all days..
             document.getElementById("subsection_content").innerHTML = "<h2>Click markers in google map to see the planned route of the day</h2>"

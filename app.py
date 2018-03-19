@@ -36,12 +36,16 @@ def index():
                            mytrip=mytrip,
                            mytrip_items=mytrip_items)
 
+
+@app.route("/ebc/ebc_beforetrip")
+def tab_page():
+    return render_template("ebc_beforetrip.html")
+
 @app.route("/ebc/out/<string:pid>")
 def index_with_specific_marker(pid):
     pid = int(pid)
     mt = {}
     for key in mytrip.keys():
-         print(key)
          mt[key] =  [mytrip[key][pid],mytrip[key][pid+1]]
     mt["PID"] = 0
     mti = {"0":mytrip_items[pid]}

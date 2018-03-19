@@ -26,26 +26,28 @@ def get_path_and_altitutde(origin,destination):
              "distance":km,
               "duration":dur}]
     req = request_path(origin.latlng,destination.latlng)
-    try:
-        places = request_load(req)
-        for r in places["routes"][0]["legs"][0]["steps"]:
-            km += r["distance"]["value"]
-            dur += r["duration"]["value"]/60.0
-            startdict = r["start_location"]
-            startdict["placename"] = ""
-            startdict["distance"] = km
-            startdict["duration"] = dur
-            ## request altitude
-            req = request_alt((startdict["lat"],
-                               startdict["lng"]))
+    if origin.placename != destination.placename:
+        try:
             places = request_load(req)
-            startdict["altitude"] = places['results'][0]['elevation'];
-            info.append(startdict)
-    except Exception as e:
-        print(e)
-        km = 1
-        dur = 1
-        pass
+            for r in places["routes"][0]["legs"][0]["steps"]:
+                km += r["distance"]["value"]
+                dur += r["duration"]["value"]/60.0
+                startdict = r["start_location"]
+                startdict["placename"] = ""
+                startdict["distance"] = km
+                startdict["duration"] = dur
+                ## request altitude
+                req = request_alt((startdict["lat"],
+                                   startdict["lng"]))
+                places = request_load(req)
+                startdict["altitude"] = places['results'][0]['elevation'];
+                info.append(startdict)
+        except Exception as e:
+            print(e)
+            km, dur = 1, 1
+            pass
+    else:
+        km, dur = 1, 1
     info.append({"lat": destination.latlng[0],
                  "lng": destination.latlng[1],
                  "placename": destination.placename,
@@ -143,8 +145,8 @@ class Trip(object):
 
 if __name__ == '__main__':
 
-
-    file = pd.read_csv("app/static/data/mytrip.csv")
+    dir_data = 'static/data/'
+    file = pd.read_csv(dir_data + "/mytrip.csv")
     ## define mytrip object
     mytrip = Trip()
     for irow in range(file.shape[0]):
@@ -181,13 +183,13 @@ if __name__ == '__main__':
                      point.latlng[1],
                      point.altitude])
         if point.path2next is not None:
-            pd.DataFrame(point.path2next).to_csv("app/static/data/mytrip_item/mytrip_"+pid_string+".csv",
+            pd.DataFrame(point.path2next).to_csv(dir_data + "/mytrip_item/mytrip_"+pid_string+".csv",
                                              index=False)
 
     dftrip = pd.DataFrame(text,
                           columns=["PID", "Day","placename","schedule","lat","lng","altitude"])
     dftrip["PID"] = dftrip["PID"].astype('str')
-    dftrip.to_csv("app/static/data/mytrip.csv",index=False)
+    dftrip.to_csv(dir_data + "/mytrip.csv",index=False)
 
 
 
