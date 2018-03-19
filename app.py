@@ -29,6 +29,12 @@ maxPIDm1 = len(mytrip["PID"]) - 1
 ## mytrip_items[0].keys()
 ## Out[89]: ['distance', 'placename', 'altitude', 'lat', 'duration', 'lng']
 
+@app.route("/") ## If I could create another trip's back log, I should create a summary page here
+def index():
+    return render_template("ebc.html",
+                           maxPIDm1=maxPIDm1,
+                           mytrip=mytrip,
+                           mytrip_items=mytrip_items)
 @app.route("/ebc")
 def index():
     return render_template("ebc.html",
