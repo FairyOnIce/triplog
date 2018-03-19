@@ -155,6 +155,7 @@ if __name__ == '__main__':
     mytrip = Trip()
     for irow in range(file.shape[0]):
         row = file.iloc[irow,:]
+        text = row["schedule"]
         mypoint = Point(row["placename"],row["schedule"],row["Day"])
         mytrip.add_point(mypoint)
 
