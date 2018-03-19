@@ -62,7 +62,6 @@ def index_with_specific_marker(pid):
 
     mt["PID"] = 0
     mti = {"0":mytrip_items[pid]}
-    print(mti)
     return render_template("ebc.html",
                            maxPIDm1=maxPIDm1,
                            mytrip=mt,

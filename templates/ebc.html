@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% block body %}
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+
 <div class="container">
     <div class="row">
         <div class="col-sm-6">
@@ -28,23 +28,21 @@
                 <br>
                 <br>
                 <!--<p id="plot_trace"></p>-->
-                <canvas id="myChart" width="400" height="400"></canvas>
+                <div class="chart-container">
+                    <canvas id="myChart" width="400" height="400"></canvas>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
+<hr>
 
 <footer class="container-fluid text-center">
-  <p>Footer Text</p>
+  <p><a href="https://fairyonice.github.io/">Yumi's blog</p>
 </footer>
 
 
-
-<script>
-
-myChart = get_myChart()
-</script>
 
 <!--read in GoogleMap
 This line needs to come right befor initMap defenition
@@ -54,13 +52,11 @@ This line needs to come right befor initMap defenition
 var mytrip       = JSON.parse('{{ mytrip | tojson | safe  }}');
 var mytrip_items = JSON.parse('{{ mytrip_items | tojson | safe  }}');
 
+myChart = get_myChart(mytrip)
+
 function initMap(){
       initialize(mytrip, mytrip_items);
 };
-
-
-//data = get_trace(mytrip);
-//Plotly.newPlot('plot_trace', data["trace"],data["layout"]);
 </script>
 
 

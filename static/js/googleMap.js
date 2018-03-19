@@ -77,8 +77,7 @@ function initialize(mytrip, mytrip_item) {
                 add_content_to_subsection(mytrip,i)
 
                 // trace i starts from 0 in java script
-                data = get_trace(mytrip_item[ mytrip.PID[i+1] ]);
-                Plotly.newPlot('plot_trace', data["trace"],data["layout"]);
+                get_myChart(mytrip_item[ mytrip.PID[i+1] ]);
 
             }
         })(marker, i));
@@ -130,42 +129,38 @@ function initialize(mytrip, mytrip_item) {
 
 
 
-function get_myChart(){
-var ctx = document.getElementById("myChart").getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero:true
-                }
-            }]
+function get_myChart(mytrip){
+
+    d = []
+    console.log(mytrip.altitude)
+    for (key_alt in mytrip.altitude){
+        if (mytrip.distance != undefined){
+            x = mytrip.distance[key_alt];
+        }else{
+            x = key_alt
         }
+        d.push({x: key_alt,
+                y:mytrip.altitude[key_alt]})
+    }
+    console.log(d)
+
+    var ctx = document.getElementById("myChart").getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+        datasets: [{
+            label: 'Altitude change (m)',
+            data: d
+        }]},
+        options: {
+            scales: {
+                xAxes: [{
+                    type: 'linear',
+                    position: 'bottom'
+                }]
+            },
+            responsive:true,
+            maintainAspectRatio: false
     }
 });
 return myChart
