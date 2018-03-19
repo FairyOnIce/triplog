@@ -9,20 +9,17 @@
         <div class="col-sm-6">
             <p id="subsection_content"></p>
 
-            <div>
-                <ul class="nav nav-pills nav-stacked">
-                <a class="dropdown-toggle" data-toggle="dropdown">
-                    Day
-                    <span class="caret" ></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="/ebc">All</a></li>
-                    {% for i in range(maxPIDm1) %}
-                    <li><a href="/ebc/out/{{i+1}}">Day {{ i+1 }}</a></li>
-                    {% endfor %}
-                </ul>
-                </ul>
-            </div>
 
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Day
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="/ebc">All</a></li>
+                        {% for i in range(maxPIDm1) %}
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="/ebc/out/{{i+1}}">Day {{ i+1 }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
         </div>
 
         <div class="row">

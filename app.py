@@ -53,9 +53,7 @@ def index_with_specific_marker(pid):
     for key in mytrip.keys(): ## key goes over distance, placename,,
         mt[key] =  [mytrip[key][pid-1], ## pid > 0
                     mytrip[key][pid]]
-        print("here")
-        print(key,pid)
-        print(mytrip[key])
+
     mt["PID"] = 0
     mti = {"0":mytrip_items[pid]}
     print(mti)
