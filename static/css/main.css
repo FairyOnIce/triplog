@@ -40,5 +40,6 @@ input[type="text"]
 
 
 .chart-container {
+    margin: 0px;
     height:200px
 }

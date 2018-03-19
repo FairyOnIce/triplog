@@ -133,8 +133,6 @@ function initialize(mytrip, mytrip_item) {
 function get_myChart(mytrip){
 
     d = []
-    console.log("inside get_myChart")
-    console.log(mytrip)
     var x = 0;
     for (key_alt in mytrip.altitude){
         if (mytrip.distance != undefined){
