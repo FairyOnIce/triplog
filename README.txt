@@ -1,0 +1,19 @@
+## Open pycharm project
+
+## --------------------------- ##
+## Test locally
+## --------------------------- ##
+python app.py
+
+## --------------------------- ##
+## Upload the change to Heroku
+## --------------------------- ##
+## Step 1: add change to git
+git add .
+## Step 2: commit with comments
+git commit . -m "ABC changes"
+## Step 3: push the commit
+git push heroku master
+## Step 4: go to the webpage and to make sure the chnage
+## Step 5: force refresh
+command - shift - R

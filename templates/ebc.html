@@ -11,16 +11,17 @@
             <p id="subsection_content"></p>
 
 
-                <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Day
-                        <span class="caret"></span></button>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="/ebc">All</a></li>
-                        {% for i in range(maxPIDm1) %}
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="/ebc/out/{{i+1}}">Day {{ i+1 }}</a></li>
-                        {% endfor %}
-                    </ul>
-                </div>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Day
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="/ebc">All</a></li>
+                    {% for i in range(maxPIDm1) %}
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="/ebc/out/{{i+1}}">Day {{ i+1 }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
 
         <div class="row">
@@ -37,15 +38,15 @@
 <hr>
 
 <footer class="container-fluid text-center">
-  <p><a href="https://fairyonice.github.io/">Yumi's blog</p>
+    <p><a href="https://fairyonice.github.io/">Yumi's blog</p>
 </footer>
-
 
 
 <!--read in GoogleMap
 This line needs to come right befor initMap defenition
 -->
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC1xvs61savLDwAnHYYXOPP1kp1TLDTWI&callback=initMap"></script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC1xvs61savLDwAnHYYXOPP1kp1TLDTWI&callback=initMap"></script>
 <script>
 var mytrip       = JSON.parse('{{ mytrip | tojson | safe  }}');
 var mytrip_items = JSON.parse('{{ mytrip_items | tojson | safe  }}');
@@ -55,8 +56,8 @@ myChart = get_myChart(mytrip)
 function initMap(){
       initialize(mytrip, mytrip_items);
 };
-</script>
 
+</script>
 
 
 <hr>
