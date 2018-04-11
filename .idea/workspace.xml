@@ -60,10 +60,10 @@
       <file leaf-file-name="ebc_beforetrip.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/ebc_beforetrip.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="428" column="49" lean-forward="false" selection-start-line="428" selection-start-column="49" selection-end-line="428" selection-end-column="49" />
+            <state relative-caret-position="325">
+              <caret line="442" column="17" lean-forward="false" selection-start-line="442" selection-start-column="17" selection-end-line="442" selection-end-column="17" />
               <folding>
-                <element signature="e#27913#27919#0" expanded="true" />
+                <element signature="e#28824#28830#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -462,7 +462,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#27913#27919#0" expanded="true" />
+            <element signature="e#28824#28830#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -799,10 +799,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/ebc_beforetrip.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="428" column="49" lean-forward="false" selection-start-line="428" selection-start-column="49" selection-end-line="428" selection-end-column="49" />
+        <state relative-caret-position="325">
+          <caret line="442" column="17" lean-forward="false" selection-start-line="442" selection-start-column="17" selection-end-line="442" selection-end-column="17" />
           <folding>
-            <element signature="e#27913#27919#0" expanded="true" />
+            <element signature="e#28824#28830#0" expanded="true" />
           </folding>
         </state>
       </provider>
