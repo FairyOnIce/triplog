@@ -57,7 +57,7 @@ def tab_gear():
     return render_template("ebc_beforetrip_gear.html")
 
 @app.route("/ebc/ebc_beforetrip_reminder")
-def tab_gear():
+def tab_reminder():
     return render_template("ebc_beforetrip_reminder.html")
 
 @app.route("/ebc/out/<string:pid>")
