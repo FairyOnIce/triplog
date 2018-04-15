@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9731d713-3b3b-4326-a887-a7e4e5f7adba" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/ebc_beforetrip_gear.html" afterPath="$PROJECT_DIR$/templates/ebc_beforetrip_gear.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/gear_backpack.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/gear_head.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/gear_shoes.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/gear_sleeping.JPG" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -60,8 +63,8 @@
       <file leaf-file-name="ebc_beforetrip_gear.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/ebc_beforetrip_gear.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="583" column="89" lean-forward="false" selection-start-line="583" selection-start-column="89" selection-end-line="583" selection-end-column="89" />
+            <state relative-caret-position="304">
+              <caret line="593" column="30" lean-forward="false" selection-start-line="593" selection-start-column="30" selection-end-line="593" selection-end-column="30" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#li#0;n#ol#0;n#div#0;n#div#0;n#div#0;n#body#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#li#1;n#ol#0;n#div#0;n#div#0;n#div#0;n#body#0;n#div#0;n#!!top" expanded="true" />
@@ -903,8 +906,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/ebc_beforetrip_gear.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="583" column="89" lean-forward="false" selection-start-line="583" selection-start-column="89" selection-end-line="583" selection-end-column="89" />
+        <state relative-caret-position="304">
+          <caret line="593" column="30" lean-forward="false" selection-start-line="593" selection-start-column="30" selection-end-line="593" selection-end-column="30" />
           <folding>
             <element signature="n#style#0;n#img#0;n#li#0;n#ol#0;n#div#0;n#div#0;n#div#0;n#body#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#li#1;n#ol#0;n#div#0;n#div#0;n#div#0;n#body#0;n#div#0;n#!!top" expanded="true" />
