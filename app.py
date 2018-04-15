@@ -47,6 +47,15 @@ def index_ebc():
 def tab_page():
     return render_template("ebc_beforetrip.html")
 
+@app.route("/ebc/ebc_beforetrip_challenges")
+def tab_challenge():
+    return render_template("ebc_beforetrip_challenges.html")
+
+
+@app.route("/ebc/ebc_beforetrip_gear")
+def tab_gear():
+    return render_template("ebc_beforetrip_gear.html")
+
 @app.route("/ebc/out/<string:pid>")
 def index_with_specific_marker(pid):
     ## pid must be greater than 0

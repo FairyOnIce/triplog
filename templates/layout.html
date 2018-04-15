@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <title>Gyoko Lake + EBC quest in April 2018</title>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 
@@ -22,13 +21,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
 
 
-
-
-     <!-- add after bootstrap.min.css -->
-     <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.0/dist/bootstrap-toc.min.css">
+    <!-- add after bootstrap.min.css -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.0/dist/bootstrap-toc.min.css">
     <!-- add after bootstrap.min.js -->
     <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.0/dist/bootstrap-toc.min.js"></script>
-
 
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -38,32 +34,48 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'UA-112020731-1');
+
     </script>
 </head>
 
 <body>
- <div class="container" > 
-    <h1 class="title"> 15-day Gokyo Everest Base Camp Trek, April 2018</h1> 
-</div> 
+ 
+<div class="container"> 
+    <titlefontcenter> 15-day Gokyo Everest Base Camp Trek, April 2018</titlefontcenter> 
+</div>
+ 
 
 
 <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+
+                <li class="active"><a href="/ebc">Planned Itinerary</a></li>
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Pre-Trip
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/ebc/ebc_beforetrip">Why visiting EBC?</a></li>
+                        <li><a href="/ebc/ebc_beforetrip_challenges">Challenges, preparing affordable trip</a></li>
+                        <li><a href="/ebc/ebc_beforetrip_gear">Gears that I bring</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">Post-Trip</a></li>
+            </ul>
+        </div>
+
+
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="/ebc">Planned Itinerary</a></li>
-        <li><a href="/ebc/ebc_beforetrip">Pre-Trip</a></li>
-        <li><a href="#">Post-Trip</a></li>
-      </ul>
-    </div>
-  </div>
 </nav>
 
 
@@ -91,8 +103,10 @@
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();
+
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments
+    powered by Disqus.</a></noscript>
 
 </body>
 </html>
