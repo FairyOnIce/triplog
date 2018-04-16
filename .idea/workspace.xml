@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9731d713-3b3b-4326-a887-a7e4e5f7adba" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/ebc_beforetrip_gear.html" afterPath="$PROJECT_DIR$/templates/ebc_beforetrip_gear.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/ebc_beforetrip_reminder.html" afterPath="$PROJECT_DIR$/templates/ebc_beforetrip_reminder.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ebc_beforetrip_reminder.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ebc_beforetrip_reminder.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/ebc_beforetrip_reminder.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+            <state relative-caret-position="315">
+              <caret line="22" column="26" lean-forward="false" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -89,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ebc_beforetrip_gear.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ebc_beforetrip_gear.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/ebc_beforetrip_gear.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="658" column="72" lean-forward="false" selection-start-line="658" selection-start-column="72" selection-end-line="658" selection-end-column="72" />
+            <state relative-caret-position="259">
+              <caret line="664" column="0" lean-forward="true" selection-start-line="664" selection-start-column="0" selection-end-line="664" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#li#0;n#ol#0;n#div#0;n#div#1;n#div#0;n#body#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#li#1;n#ol#0;n#div#0;n#div#1;n#div#0;n#body#0;n#div#0;n#!!top" expanded="true" />
@@ -168,8 +170,8 @@
       <find>hat</find>
       <find>gears</find>
       <find>5-day Gokyo Everest Base</find>
-      <find>ourli</find>
       <find>gear</find>
+      <find>ourli</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -191,9 +193,9 @@
         <option value="$PROJECT_DIR$/templates/ebc_befoetrip_reminder.html" />
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/templates/layout.html" />
-        <option value="$PROJECT_DIR$/templates/ebc_beforetrip_reminder.html" />
         <option value="$PROJECT_DIR$/templates/ebc.html" />
         <option value="$PROJECT_DIR$/templates/ebc_beforetrip_gear.html" />
+        <option value="$PROJECT_DIR$/templates/ebc_beforetrip_reminder.html" />
       </list>
     </option>
   </component>
@@ -470,7 +472,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="68" y="23" width="1192" height="732" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34927413" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45625" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -480,7 +482,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24935952" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3078125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3078125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -879,14 +881,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ebc_beforetrip_reminder.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/ebc_beforetrip.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-431">
@@ -895,18 +889,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="65" column="46" lean-forward="true" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/ebc_beforetrip_gear.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="658" column="72" lean-forward="false" selection-start-line="658" selection-start-column="72" selection-end-line="658" selection-end-column="72" />
+        <state relative-caret-position="259">
+          <caret line="664" column="0" lean-forward="true" selection-start-line="664" selection-start-column="0" selection-end-line="664" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#img#0;n#li#0;n#ol#0;n#div#0;n#div#1;n#div#0;n#body#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#li#1;n#ol#0;n#div#0;n#div#1;n#div#0;n#body#0;n#div#0;n#!!top" expanded="true" />
@@ -938,6 +924,22 @@
             <element signature="n#style#0;n#img#0;n#div#1;n#div#11;n#body#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#h3#0;n#body#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="65" column="46" lean-forward="true" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ebc_beforetrip_reminder.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="22" column="26" lean-forward="false" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
