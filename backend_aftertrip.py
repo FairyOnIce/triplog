@@ -1,7 +1,5 @@
 import requests
-import json, sys
-
-sys.path.append('../')
+import json
 from personal import flikr_api_key as api_key
 from personal import user_id as uid
 
