@@ -17,3 +17,10 @@ git push heroku master
 ## Step 4: go to the webpage and to make sure the chnage
 ## Step 5: force refresh
 command - shift - R
+
+
+## --------------------------- ##
+## Real time logging
+## --------------------------- ##
+
+heroku logs --tail
