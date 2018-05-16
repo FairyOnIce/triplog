@@ -1,33 +1,23 @@
 from flask import Flask, render_template
-import pandas as pd
+# https://github.com/johnschimmel/Instagram---Python-Flask-example/blob/master/app.py
 from backend import *
+from personal import photoset_ids
+from backend_aftertrip import get_picURL_of_album
+from random import randint
+
 ## Heroku reference
 # https://github.com/datademofun/heroku-basic-flask
 
 
 app = Flask(__name__)
 
-dir_data = "static/data/"
-## read in all the csv
-mytrip = pd.read_csv(dir_data + "/mytrip.csv").fillna("--").to_dict()
-mytrip_items = {}
-for pid in mytrip["PID"].keys():
-    try:
-        fnm = dir_data + "/mytrip_item/mytrip_{:05.0f}.csv".format(pid)
-        mytrip_items[pid] = pd.read_csv(fnm).fillna("--").to_dict()
-    except Exception as e:
-        print(e)
-        pass
 
-maxPIDm1 = len(mytrip["PID"]) - 1
 
-## mytrip.keys()
-## Out[87]: ['placename', 'schedule', 'altitude', 'PID', 'lat', 'lng', 'Day']
-##
-## mytrip_items.keys()
-## Out[88]: [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
-## mytrip_items[0].keys()
-## Out[89]: ['distance', 'placename', 'altitude', 'lat', 'duration', 'lng']
+mytrip, mytrip_items, maxPIDm1 = initiaize_gps_data_pretrip()
+
+
+
+
 
 @app.route("/") ## If I could create another trip's back log, I should create a summary page here
 def index():
@@ -46,6 +36,16 @@ def index_ebc():
 @app.route("/ebc/ebc_beforetrip")
 def tab_page():
     return render_template("ebc_beforetrip.html")
+
+@app.route("/ebc/ebc_aftertrip")
+def index_ebc_after():
+
+    photoset_id = photoset_ids[randint(0, len(photoset_ids))]
+    randompics = get_picURL_of_album(photoset_id)
+    print("aaa")
+    return render_template("ebc_aftertrip.html",
+                           randompics=randompics)
+
 
 @app.route("/ebc/ebc_beforetrip_challenges")
 def tab_challenge():

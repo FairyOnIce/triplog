@@ -8,7 +8,30 @@ from personal import MY_API_KEY
 
 GoogleMap_API="https://maps.googleapis.com/maps/api/"
 
+def initiaize_gps_data_pretrip():
+    dir_data = "static/data/"
+    ## read in all the csv
+    mytrip = pd.read_csv(dir_data + "/mytrip.csv").fillna("--").to_dict()
+    mytrip_items = {}
+    for pid in mytrip["PID"].keys():
+        try:
+            fnm = dir_data + "/mytrip_item/mytrip_{:05.0f}.csv".format(pid)
+            mytrip_items[pid] = pd.read_csv(fnm).fillna("--").to_dict()
+        except Exception as e:
+            print(e)
+            pass
 
+    maxPIDm1 = len(mytrip["PID"]) - 1
+
+    ## mytrip.keys()
+    ## Out[87]: ['placename', 'schedule', 'altitude', 'PID', 'lat', 'lng', 'Day']
+    ##
+    ## mytrip_items.keys()
+    ## Out[88]: [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    ## mytrip_items[0].keys()
+    ## Out[89]: ['distance', 'placename', 'altitude', 'lat', 'duration', 'lng']
+
+    return(mytrip, mytrip_items, maxPIDm1)
 def get_path_and_altitutde(origin,destination):
     '''
 

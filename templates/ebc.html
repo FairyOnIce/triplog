@@ -47,8 +47,9 @@
 <!--read in GoogleMap
 This line needs to come right befor initMap defenition
 -->
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC1xvs61savLDwAnHYYXOPP1kp1TLDTWI&callback=initMap"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC1xvs61savLDwAnHYYXOPP1kp1TLDTWI&callback=initMap">
+</script>
+
 <script>
 var mytrip       = JSON.parse('{{ mytrip | tojson | safe  }}');
 var mytrip_items = JSON.parse('{{ mytrip_items | tojson | safe  }}');
