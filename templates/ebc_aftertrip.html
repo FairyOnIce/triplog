@@ -31,8 +31,13 @@
 This line needs to come right befor initMap defenition
 -->
 <script>
+
+
+<!--console.log(points_aftertrip)-->
+
 function initMap(){
-    initialize_aftertrip()
+    var pa = {{ points_aftertrip | safe }}
+    initialize_aftertrip(pa)
 };
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC1xvs61savLDwAnHYYXOPP1kp1TLDTWI&callback=initMap"></script>

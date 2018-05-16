@@ -20,6 +20,7 @@ function getAltString(meter){
 
 
 function display_map_on_page(){
+     var lukla = {lat: 27.695529, lng: 86.727778};
      var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 9,
           mapTypeId: google.maps.MapTypeId.HYBRID
@@ -27,8 +28,6 @@ function display_map_on_page(){
      map.setTilt(45);
      return(map)
 }
-
-
 <!-- https://wrightshq.com/playground/placing-multiple-markers-on-a-google-map-using-api-3/ -->
 function initialize(mytrip, mytrip_item) {
     // info window contents

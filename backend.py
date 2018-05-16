@@ -5,11 +5,12 @@ import pandas as pd
 sys.path.append("app/")
 from personal import MY_API_KEY
 
+dir_data = "static/data/"
 
 GoogleMap_API="https://maps.googleapis.com/maps/api/"
 
 def initiaize_gps_data_pretrip():
-    dir_data = "static/data/"
+
     ## read in all the csv
     mytrip = pd.read_csv(dir_data + "/mytrip.csv").fillna("--").to_dict()
     mytrip_items = {}

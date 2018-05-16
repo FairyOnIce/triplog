@@ -2,7 +2,7 @@ from flask import Flask, render_template
 # https://github.com/johnschimmel/Instagram---Python-Flask-example/blob/master/app.py
 from backend import *
 from personal import photoset_ids
-from backend_aftertrip import get_picURL_of_album
+from backend_aftertrip import get_picURL_of_album, initialize_gps_data_aftertrip
 from random import randint
 
 ## Heroku reference
@@ -16,7 +16,7 @@ app = Flask(__name__)
 mytrip, mytrip_items, maxPIDm1 = initiaize_gps_data_pretrip()
 
 
-
+points_aftertrip = initialize_gps_data_aftertrip()
 
 
 @app.route("/") ## If I could create another trip's back log, I should create a summary page here
@@ -42,9 +42,9 @@ def index_ebc_after():
 
     photoset_id = photoset_ids[randint(0, len(photoset_ids))]
     randompics = get_picURL_of_album(photoset_id)
-    print("aaa")
     return render_template("ebc_aftertrip.html",
-                           randompics=randompics)
+                           randompics=randompics,
+                           points_aftertrip=points_aftertrip)
 
 
 @app.route("/ebc/ebc_beforetrip_challenges")
