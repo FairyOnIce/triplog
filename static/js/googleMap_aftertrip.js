@@ -17,20 +17,6 @@ function display_map_on_page_aftertrip(points_aftertrip){
      var Day = 1;
      var pointsDay = []
 
-     // :::Day 1 marker:::
-     marker = new google.maps.Marker({
-                position: points_aftertrip[0],
-                map: map
-     });
-     // Allow each marker to have an info window
-     google.maps.event.addListener(marker, 'click', (function(marker,i) {
-         return function() {
-             text = summary_of_the_day(points_aftertrip[0]);
-             infoWindow.setContent(text);
-             infoWindow.open(map, marker);
-             map.setCenter(marker.getPosition());
-             }
-         })(marker, i));
 
      for (i = 0; i < points_aftertrip.length ;i++){
 
@@ -55,7 +41,7 @@ function display_map_on_page_aftertrip(points_aftertrip){
             // Allow each marker to have an info window
             google.maps.event.addListener(marker, 'click', (function(marker,i) {
                 return function() {
-                    text = summary_of_the_day(points_aftertrip[i]);
+                    text = summary_of_the_day(points_aftertrip[i-1]);
                     infoWindow.setContent(text);
                     infoWindow.open(map, marker);
                     map.setCenter(marker.getPosition());
@@ -74,16 +60,20 @@ function display_map_on_page_aftertrip(points_aftertrip){
 
 
 function summary_of_the_day(pt){
-    text = "<h3> Day " +  pt["Day"] + "</h3> <h4>" + pt["date"] + " </h4>";
+    text = "<h3> Day " +  pt["Day"] + " Goal</h3> <h4>" + pt["date"] + " </h4>";
     text += "<ul>"
     text += "<li>Altitude: " + m2feet(pt["alt"]) + "</li>";
     text += "<li>Total ascent: " + m2feet(pt["gain"])+ "</li>";
-    text += "<li>Total decent: " + m2feet(pt["loss"])+ "</li>";
+    text += "<li>Total descent: " + m2feet(pt["loss"])+ "</li>";
+    text += "<li>Total distance: " + m2feet(pt["csdist"],"km")+ "</li>";
     text += "</ul>"
     return(text)
 }
 
-function m2feet(p){
+function m2feet(p,unit="m"){
+    if (unit == "km"){
+        p *= 1000
+    }
     return(Math.round(p) + " m (" + Math.round(3.28084*p) + " feet)");
 }
 <!-- https://wrightshq.com/playground/placing-multiple-markers-on-a-google-map-using-api-3/ -->
