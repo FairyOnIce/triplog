@@ -54,7 +54,7 @@ function display_map_on_page_aftertrip(points_aftertrip){
             // Allow each marker to have an info window
             google.maps.event.addListener(marker, 'click', (function(marker,i) {
                 return function() {
-                    text = summary_of_the_day(points_aftertrip[i+1]);
+                    text = summary_of_the_day(points_aftertrip[i]);
                     infoWindow.setContent(text);
                     infoWindow.open(map, marker);
                     map.setCenter(marker.getPosition());
