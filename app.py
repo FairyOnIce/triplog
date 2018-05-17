@@ -21,10 +21,11 @@ points_aftertrip = initialize_gps_data_aftertrip()
 
 @app.route("/") ## If I could create another trip's back log, I should create a summary page here
 def index():
-    return render_template("ebc.html",
-                           maxPIDm1=maxPIDm1,
-                           mytrip=mytrip,
-                           mytrip_items=mytrip_items)
+    photoset_id = photoset_ids[randint(0, len(photoset_ids))]
+    randompics = get_picURL_of_album(photoset_id)
+    return render_template("ebc_aftertrip.html",
+                           randompics=randompics,
+                           points_aftertrip=points_aftertrip)
 @app.route("/ebc")
 def index_ebc():
     return render_template("ebc.html",

@@ -52,7 +52,6 @@ function display_map_on_page_aftertrip(points_aftertrip){
                 position: points_aftertrip[i],
                 map: map
             });
-
             // Allow each marker to have an info window
             google.maps.event.addListener(marker, 'click', (function(marker,i) {
                 return function() {
