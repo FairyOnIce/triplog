@@ -26,7 +26,7 @@ def get_photo_url(farmId, serverId, Id, secret):
 def get_picURL_of_album(photoset_id):
 
     url = get_requestURL(endpoint="getPhotos") + "&photoset_id=" + photoset_id
-
+    print(url)
     strlist = requests.get(url).content
 
     json1_data = json.loads(strlist)
