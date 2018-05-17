@@ -17,11 +17,11 @@ function display_map_on_page_aftertrip(points_aftertrip){
      var Day = 1;
      var pointsDay = []
 
+     // :::Day 1 marker:::
      marker = new google.maps.Marker({
                 position: points_aftertrip[0],
                 map: map
      });
-
      // Allow each marker to have an info window
      google.maps.event.addListener(marker, 'click', (function(marker,i) {
          return function() {
@@ -46,6 +46,8 @@ function display_map_on_page_aftertrip(points_aftertrip){
             path.setMap(map);
             Day = points_aftertrip[i]["Day"]
             pointsDay = []
+
+            // :::Day <i> marker:::
             marker = new google.maps.Marker({
                 position: points_aftertrip[i],
                 map: map
