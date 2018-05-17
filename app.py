@@ -41,6 +41,7 @@ def tab_page():
 def index_ebc_after():
 
     photoset_id = photoset_ids[randint(0, len(photoset_ids))]
+    print("hiii")
     randompics = get_picURL_of_album(photoset_id)
     return render_template("ebc_aftertrip.html",
                            randompics=randompics,
