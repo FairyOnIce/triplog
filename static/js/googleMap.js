@@ -143,7 +143,6 @@ function get_myChart(mytrip){
         d.push({x: x,
                 y:mytrip.altitude[key_alt]})
     }
-    console.log(d)
 
     var ctx = document.getElementById("myChart").getContext('2d');
     var myChart = new Chart(ctx, {
