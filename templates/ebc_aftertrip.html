@@ -1,10 +1,26 @@
 {% extends "layout.html" %}
 {% block body %}
 
+<div class="container">
+  <ul class="nav nav-tabs">
+      <li class="active"><a href="#">All</a></li>
+      <li class="active"><a href="/ebc/ebc_aftertrip/1">Day 1</a></li>
+      <li class="active"><a href="/ebc/ebc_aftertrip/2">Day 2</a></li>
+      <li class="active"><a href="/ebc/ebc_aftertrip/3">Day 3</a></li>
+  </ul>
+  <br>
+  <p><strong>Note:</strong> This example shows how to create a basic navigation tab. It is not toggleable/dynamic yet (you can't click on the links to display different content)- see the last example in the Bootstrap Tabs and Pills Tutorial to find out how this can be done.</p>
+</div>
+
+
+
+
+
 
 <div class="container">
     <div class="row" margin="0px">
         <div class="col-sm-9">
+
             <div id="map" style="width:100%;height:600px;"></div>
         </div>
 
@@ -15,6 +31,8 @@
          </div>
     </div>
 </div>
+
+
 
 
 
