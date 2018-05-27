@@ -19,6 +19,13 @@ titlefont {
     font-weight: bold;
 
 }
+.nav .navbar{
+    padding: 0px 0px;
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+
+
 
 titlefontcenter {
     display: block;

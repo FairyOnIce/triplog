@@ -81,9 +81,16 @@
                     </ul>
                 </li>
 
-
-
             </ul>
+
+            {% if Ntrip %}
+            <ul class="nav navbar-nav">
+                <li class="nav-item nav-link active"><a href="/ebc/ebc_aftertrip">All</a></li>
+                {% for itrip in range( Ntrip ) %}
+                <li class="nav-item nav-link active"><a href="/ebc/ebc_aftertrip/{{itrip}}">Day {{itrip+1}}</a></li>
+               {% endfor %}
+            </ul>
+            {% endif %}
         </div>
 
 
