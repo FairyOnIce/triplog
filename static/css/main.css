@@ -22,9 +22,9 @@ titlefont {
 
 titlefontcenter {
     display: block;
-    font-size: 2em;
-    margin-top: 0em;
-    margin-bottom: 0em;
+    font-size: 200%;
+    margin-top: .2em;
+    margin-bottom: .2em;
     margin-left: 0;
     margin-right: 0;
     font-weight: bold;
