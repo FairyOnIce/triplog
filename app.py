@@ -17,7 +17,7 @@ mytrip, mytrip_items, maxPIDm1 = initiaize_gps_data_pretrip()
 
 
 points_aftertrip, index_Day = initialize_gps_data_aftertrip()
-
+Ntrip = len(index_Day)
 
 @app.route("/") ## If I could create another trip's back log, I should create a summary page here
 def index():
@@ -25,6 +25,7 @@ def index():
     randompics = get_picURL_of_album(photoset_id)
     return render_template("ebc_aftertrip.html",
                            randompics=randompics,
+                           Ntrip = Ntrip,
                            points_aftertrip=points_aftertrip)
 @app.route("/ebc")
 def index_ebc():
@@ -33,6 +34,7 @@ def index_ebc():
     randompics = get_picURL_of_album(photoset_id)
     return render_template("ebc_aftertrip.html",
                            randompics=randompics,
+                           Ntrip=Ntrip,
                            points_aftertrip=points_aftertrip)
 
 
@@ -51,6 +53,7 @@ def index_ebc_after():
     randompics = get_picURL_of_album(photoset_id)
     return render_template("ebc_aftertrip.html",
                            randompics=randompics,
+                           Ntrip=Ntrip,
                            points_aftertrip=points_aftertrip)
 
 @app.route("/ebc/ebc_aftertrip/<string:pid>")
@@ -62,6 +65,7 @@ def index_ebc_after_specific_marker(pid):
 
     return render_template("ebc_aftertrip.html",
                            randompics=pics,
+                           Ntrip=Ntrip,
                            points_aftertrip=p_trip)
 
 @app.route("/ebc/ebc_beforetrip_gear")
