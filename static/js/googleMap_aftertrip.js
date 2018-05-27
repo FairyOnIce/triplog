@@ -1,4 +1,38 @@
 
+function get_plot_latlng(points_aftertrip){
+
+    d = []
+    var x = 0;
+    var i;
+    var myd = 0;
+    for (i = 0; i < points_aftertrip.length ;i++){
+        myd += points_aftertrip[i].dist
+        d.push({x: myd,
+                y: points_aftertrip[i].alt})
+    }
+
+    var ctx = document.getElementById("get_plot_latlng").getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+        datasets: [{
+            label: 'Altitude (m)',
+            data: d
+        }]},
+        options: {
+            scales: {
+                xAxes: [{
+                    type: 'linear',
+                    position: 'bottom'
+                }]
+            },
+            responsive:true,
+            maintainAspectRatio: false
+    }
+});
+return myChart
+}
+
 
 
 function display_map_on_page_aftertrip(points_aftertrip){
@@ -16,13 +50,22 @@ function display_map_on_page_aftertrip(points_aftertrip){
      var i;
      var Day = 1;
      var pointsDay = []
-
-
+     var bounds = new google.maps.LatLngBounds();
+     // run over all the points
      for (i = 0; i < points_aftertrip.length ;i++){
 
         if (Day == points_aftertrip[i]["Day"]){
             pointsDay.push(points_aftertrip[i])
+
+            // record points to adjust the bounding box size
+            var position = new google.maps.LatLng(
+                points_aftertrip[i]["lat"],
+                points_aftertrip[i]["lng"]);
+            bounds.extend(position);
+            // Automatically center the map fitting all markers on the screen
+            map.fitBounds(bounds);
         }else{
+           // The first point for this new Day
             var path = new google.maps.Polyline({
                         path: pointsDay,
                         geodesic: true,
@@ -45,22 +88,29 @@ function display_map_on_page_aftertrip(points_aftertrip){
                     infoWindow.setContent(text);
                     infoWindow.open(map, marker);
                     map.setCenter(marker.getPosition());
+
+                    // Blog comments
+                    content = i
+                    document.getElementById("blog_diary").innerHTML = content
+
                 }
             })(marker, i));
-
-
 
         }
      }
 
 
-
+     // Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
+     var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
+                this.setZoom(4);
+                google.maps.event.removeListener(boundsListener);
+     });
      return(map)
 }
 
-
 function summary_of_the_day(pt){
-    text = "<h3> Day " +  pt["Day"] + " Goal</h3> <h4>" + pt["date"] + " </h4>";
+    text = '<a href="/ebc/ebc_aftertrip/' + pt["Day"];
+    text += '"><h3> Day ' +  pt["Day"] + " Goal</h3></a><h4>" + pt["date"] + " </h4>";
     text += "<ul>"
     text += "<li>Altitude: " + m2feet(pt["alt"]) + "</li>";
     text += "<li>Total ascent: " + m2feet(pt["gain"])+ "</li>";

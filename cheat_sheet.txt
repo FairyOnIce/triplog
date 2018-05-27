@@ -14,7 +14,7 @@ git add .
 git commit . -m "ABC changes"
 ## Step 3: push the commit
 git push heroku master
-## Step 4: go to the webpage and to make sure the chnage
+## Step 4: go to the webpage and to make sure the change
 ## Step 5: force refresh
 command - shift - R
 

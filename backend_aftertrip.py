@@ -37,11 +37,11 @@ def get_picURL_of_album(photoset_id):
     return (urls)
 
 
-## ---------------
-
 def initialize_gps_data_aftertrip():
     trekking = (pd.read_csv(dir_data + "trekking.csv"))
     points = []
+    index_Day = [0]
+    cDay = 1
     for lat, lng, alt, date, Day, dist, gain, loss, csdist in zip(
             trekking["lat"].values,
             trekking["lon"].values,
@@ -61,5 +61,10 @@ def initialize_gps_data_aftertrip():
                        "gain":gain,
                        "loss":loss,
                        "csdist":csdist})
+        if cDay != Day:
+            index_Day.append(len(points))
+            cDay = Day
+    index_Day.append(len(points))
+    return(points, index_Day)
 
-    return(points)
+

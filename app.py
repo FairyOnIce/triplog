@@ -16,7 +16,7 @@ app = Flask(__name__)
 mytrip, mytrip_items, maxPIDm1 = initiaize_gps_data_pretrip()
 
 
-points_aftertrip = initialize_gps_data_aftertrip()
+points_aftertrip, index_Day = initialize_gps_data_aftertrip()
 
 
 @app.route("/") ## If I could create another trip's back log, I should create a summary page here
@@ -28,21 +28,8 @@ def index():
                            points_aftertrip=points_aftertrip)
 @app.route("/ebc")
 def index_ebc():
-    return render_template("ebc.html",
-                           maxPIDm1=maxPIDm1,
-                           mytrip=mytrip,
-                           mytrip_items=mytrip_items)
-
-
-@app.route("/ebc/ebc_beforetrip")
-def tab_page():
-    return render_template("ebc_beforetrip.html")
-
-@app.route("/ebc/ebc_aftertrip")
-def index_ebc_after():
 
     photoset_id = photoset_ids[randint(0, len(photoset_ids))]
-    print("hiii")
     randompics = get_picURL_of_album(photoset_id)
     return render_template("ebc_aftertrip.html",
                            randompics=randompics,
@@ -53,6 +40,29 @@ def index_ebc_after():
 def tab_challenge():
     return render_template("ebc_beforetrip_challenges.html")
 
+
+@app.route("/ebc/ebc_beforetrip")
+def tab_page():
+    return render_template("ebc_beforetrip.html")
+
+@app.route("/ebc/ebc_aftertrip")
+def index_ebc_after():
+    photoset_id = photoset_ids[randint(0, len(photoset_ids))]
+    randompics = get_picURL_of_album(photoset_id)
+    return render_template("ebc_aftertrip.html",
+                           randompics=randompics,
+                           points_aftertrip=points_aftertrip)
+
+@app.route("/ebc/ebc_aftertrip/<string:pid>")
+def index_ebc_after_specific_marker(pid):
+    pid = int(pid)
+    photoset_id = photoset_ids[pid]
+    pics = get_picURL_of_album(photoset_id)
+    p_trip = points_aftertrip[index_Day[pid]:index_Day[pid+1]]
+
+    return render_template("ebc_aftertrip.html",
+                           randompics=pics,
+                           points_aftertrip=p_trip)
 
 @app.route("/ebc/ebc_beforetrip_gear")
 def tab_gear():
