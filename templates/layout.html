@@ -36,13 +36,16 @@
     gtag('js', new Date());
     gtag('config', 'UA-112020731-1');
 
+
+
     </script>
 </head>
 
 <body>
  
 <div class="container"> 
-    <titlefontcenter> 15-day Gokyo Everest Base Camp Trek, April 2018</titlefontcenter> 
+    <titlefontcenter> 15-day Gokyo Everest Base Camp Trek, April 2018</titlefontcenter>
+     
 </div>
  
 
@@ -80,20 +83,26 @@
                         <li><a href="/ebc/ebc_beforetrip_reminder">Pre-trip final reminder to myself</a></li>
                     </ul>
                 </li>
-
             </ul>
+        </div>
+        {% if Ntrip %}
 
-            {% if Ntrip %}
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar2">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar2">
             <ul class="nav navbar-nav">
                 <li class="nav-item nav-link active"><a href="/ebc/ebc_aftertrip">All</a></li>
                 {% for itrip in range( Ntrip ) %}
                 <li class="nav-item nav-link active"><a href="/ebc/ebc_aftertrip/{{itrip}}">Day {{itrip+1}}</a></li>
-               {% endfor %}
+                {% endfor %}
             </ul>
-            {% endif %}
         </div>
-
-
+        {% endif %}
     </div>
 </nav>
 
