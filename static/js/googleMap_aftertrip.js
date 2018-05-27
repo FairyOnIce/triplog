@@ -105,7 +105,7 @@ function display_map_on_page_aftertrip(points_aftertrip){
                 this.setZoom(4);
                 google.maps.event.removeListener(boundsListener);
      });
-     google.maps.event.trigger(map, 'resize');
+     //google.maps.event.trigger(map, 'resize');
      return(map)
 }
 
