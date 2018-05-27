@@ -11,13 +11,9 @@ body{
 
 h1.titlefont {
     text-align: center;
+    font-size:  .1vw;
 }
 
-.nav .navbar{
-    padding: 0px 0px;
-    margin-top: 0em;
-    margin-bottom: 0em;
-}
 
 
 
