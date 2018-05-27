@@ -89,12 +89,12 @@
 
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar2">
-                <span class="label label-default">Trip log</span>
+                <span class="label label-default">Daily Trip Log</span>
             </button>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar2">
             <ul class="nav navbar-nav">
-                <li class="nav-item nav-link active"><a href="/ebc/ebc_aftertrip">All</a></li>
+                <li class="nav-item nav-link active"><a href="/ebc/ebc_aftertrip">All 14 Days</a></li>
                 {% for itrip in range( Ntrip ) %}
                 <li class="nav-item nav-link active"><a href="/ebc/ebc_aftertrip/{{itrip}}">Day {{itrip+1}}</a></li>
                 {% endfor %}
