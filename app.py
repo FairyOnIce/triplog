@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 
 
-mytrip, mytrip_items, maxPIDm1 = initiaize_gps_data_pretrip()
+
 
 
 points_aftertrip, index_Day = initialize_gps_data_aftertrip()
@@ -27,15 +27,7 @@ def index():
                            randompics=randompics,
                            Ntrip = Ntrip,
                            points_aftertrip=points_aftertrip)
-@app.route("/ebc")
-def index_ebc():
 
-    photoset_id = photoset_ids[randint(0, len(photoset_ids))]
-    randompics = get_picURL_of_album(photoset_id)
-    return render_template("ebc_aftertrip.html",
-                           randompics=randompics,
-                           Ntrip=Ntrip,
-                           points_aftertrip=points_aftertrip)
 
 
 @app.route("/ebc/ebc_beforetrip_challenges")
@@ -68,6 +60,10 @@ def index_ebc_after_specific_marker(pid):
                            Ntrip=Ntrip,
                            points_aftertrip=p_trip)
 
+
+## ==================
+## Before trip pages
+## ==================
 @app.route("/ebc/ebc_beforetrip_gear")
 def tab_gear():
     return render_template("ebc_beforetrip_gear.html")
@@ -78,6 +74,7 @@ def tab_reminder():
 
 @app.route("/ebc/out/<string:pid>")
 def index_with_specific_marker(pid):
+    mytrip, mytrip_items, maxPIDm1 = initiaize_gps_data_pretrip()
     ## pid must be greater than 0
     ## pid=1,2,...
     pid = int(pid)
@@ -96,7 +93,12 @@ def index_with_specific_marker(pid):
                            mytrip=mt,
                            mytrip_items=mti)
 
-
-
+@app.route("/ebc")
+def index_ebc():
+    mytrip, mytrip_items, maxPIDm1 = initiaize_gps_data_pretrip()
+    return render_template("ebc.html",
+                           maxPIDm1=maxPIDm1,
+                           mytrip=mytrip,
+                           mytrip_items=mytrip_items)
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
