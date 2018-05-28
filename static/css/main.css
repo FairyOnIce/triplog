@@ -25,7 +25,8 @@ titlefontcenter {
 
 
 h3.title{
-
+    margin: 0 auto;
+    display: inline;
     font-size: 2vw;
     text-align: center;
 }
