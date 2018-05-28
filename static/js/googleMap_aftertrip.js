@@ -127,9 +127,40 @@ function m2feet(p,unit="m"){
     }
     return(Math.round(p) + " m (" + Math.round(3.28084*p) + " feet)");
 }
-<!-- https://wrightshq.com/playground/placing-multiple-markers-on-a-google-map-using-api-3/ -->
+// https://wrightshq.com/playground/placing-multiple-markers-on-a-google-map-using-api-3/ -->
 function initialize_aftertrip(points_aftertrip) {
     // info window contents
     var map = display_map_on_page_aftertrip(points_aftertrip);
 };
 
+
+
+
+function image_zoom_out(randompics){
+// Reference
+// https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_img
+// Get the modal
+var modal = document.getElementById('myModal');
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+for (var i = 0 ; i < randompics.length ; i++){
+    pic = randompics[i];
+    var img = document.getElementById("myImg_" + pic);
+
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+}
