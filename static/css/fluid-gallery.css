@@ -5,19 +5,7 @@ body {
     padding: 0px 0;
 }
 
-.container.gallery-container {
-    background-color: #fff;
-    color: #35373a;
-    min-height: 100vh;
-    padding: 30px 50px;
-}
 
-.gallery-container h1 {
-    text-align: center;
-    margin-top: 50px;
-    font-family: 'Droid Sans', sans-serif;
-    font-weight: bold;
-}
 
 .gallery-container p.page-description {
     text-align: center;
@@ -37,7 +25,7 @@ body {
 }
 
 .tz-gallery .lightbox img {
-    width: 46%;
+    width: 31%;
     border-radius: 0;
     position: relative;
 }

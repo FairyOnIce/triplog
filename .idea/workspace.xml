@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9731d713-3b3b-4326-a887-a7e4e5f7adba" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/fluid-gallery.css" afterPath="$PROJECT_DIR$/static/css/fluid-gallery.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/main.css" afterPath="$PROJECT_DIR$/static/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/ebc_aftertrip.html" afterPath="$PROJECT_DIR$/templates/ebc_aftertrip.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,7 +20,7 @@
       <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-270">
+            <state relative-caret-position="330">
               <caret line="36" column="34" lean-forward="false" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
@@ -55,8 +52,8 @@
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1005">
-              <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+            <state relative-caret-position="240">
+              <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -65,8 +62,8 @@
       <file leaf-file-name="fluid-gallery.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/css/fluid-gallery.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="39" column="13" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+            <state relative-caret-position="210">
+              <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -813,13 +810,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/googleMap_aftertrip.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="146" column="0" lean-forward="true" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-270">
+        <state relative-caret-position="330">
           <caret line="36" column="34" lean-forward="false" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -831,26 +844,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/googleMap_aftertrip.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="146" column="0" lean-forward="true" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1005">
-          <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/fluid-gallery.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="39" column="13" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+        <state relative-caret-position="210">
+          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
           <folding />
         </state>
       </provider>
