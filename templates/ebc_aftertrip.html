@@ -15,23 +15,20 @@
         </div>
 
         <div class="col-sm-3">
+            <div class="tz-gallery">
               {% for pic in randompics %}
-                <img src= "{{pic}}" id="myImg_{{pic}}" class="img-rounded" alt="Practice"  width="45%">
+
+                <a class="lightbox" href="{{pic}}">
+                    <img src="{{pic}}">
+                </a>
+
               {% endfor %}
+            </div>
         </div>
     </div>
 </div>
 
-<!-- Defenition of enlarged image -->
-<div class="container">
-<!-- The Modal -->
 
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
-</div>
 
 
 <div class="row">
@@ -76,12 +73,20 @@ function initMap(){
 get_plot_latlng({{ points_aftertrip | safe }});
 </script>
 
+<!--
 <script>
 // https://stackoverflow.com/questions/8710758/json-is-appearing-as-unicode-entities-in-jinja2-template/8710993
 var randompics = {{ randompics | map('string')|list|tojson}};
 image_zoom_out(randompics)
 </script>
+-->
 
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+<script>
+    baguetteBox.run('.tz-gallery');
+</script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC1xvs61savLDwAnHYYXOPP1kp1TLDTWI&callback=initMap"></script>
 
 
