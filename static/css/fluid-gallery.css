@@ -30,6 +30,15 @@ body {
     position: relative;
 }
 
+/* cellphone*/
+@media(max-width: 708px) {
+.tz-gallery .lightbox img {
+    width: 100%;
+    border-radius: 0;
+    position: relative;
+}
+}
+
 .tz-gallery .lightbox:before {
     position: absolute;
     top: 50%;
@@ -68,8 +77,3 @@ body {
     background-color: transparent !important;
 }
 
-@media(max-width: 368px) {
-    body {
-        padding: 0;
-    }
-}
