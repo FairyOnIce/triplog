@@ -33,7 +33,7 @@ body {
 /* cellphone*/
 @media(max-width: 908px) {
 .tz-gallery .lightbox img {
-    width: 10%;
+    width: 20%;
     border-radius: 0;
     position: relative;
 }
