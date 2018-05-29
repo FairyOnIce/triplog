@@ -4,18 +4,21 @@
 
 
 
-
+<!-- 1st row-->
 <div class="container">
     <div class="row" margin="0px">
-        <div class="col-sm-9">
+        <div class="col-xs-9">
             <div id="map" style="width:100%;"></div>
             <div class="chart-container">
                 <canvas id="get_plot_latlng" width="400" height="400"></canvas>
             </div>
         </div>
 
-        <div class="col-sm-3">
+        <div class="col-xs-3">
             <div class="tz-gallery">
+
+            <p id="get_summary_latlng" ></p>
+
               {% for pic in randompics %}
                 <a class="lightbox" href="{{pic}}">
                     <img src="{{pic}}" width="10">
@@ -27,18 +30,19 @@
 </div>
 
 
-
-
-<div class="row">
-    <div class="col-sm-12">
-        <div class="chart-container">
-            <canvas id="get_plot_latlng" width="400" height="400"></canvas>
+<!-- 2nd row-->
+<div class="container">
+    <div class="row" margin="-5px">
+        <div class="col-xs-12">
+            <div class="chart-container">
+                <canvas id="get_plot_latlng" width="400" height="400"></canvas>
+            </div>
         </div>
+
     </div>
 </div>
 
-
-
+<!-- 3rd row -->
 <div class="container">
     <div class="row" margin="0px">
         <div class="col-sm-12">
@@ -49,10 +53,8 @@
 </div>
 
 
+
 <hr>
-
-
-
 <footer class="container-fluid text-center">
     <p><a href="https://fairyonice.github.io/">Yumi's blog</p>
 </footer>
@@ -64,11 +66,13 @@
 This line needs to come right befor initMap defenition
 -->
 <script>
+var points_aftertrip_js = {{ points_aftertrip | safe }};
+
 function initMap(){
-    var pa = {{ points_aftertrip | safe }};
-    initialize_aftertrip(pa);
+    initialize_aftertrip(points_aftertrip_js);
 };
-get_plot_latlng({{ points_aftertrip | safe }});
+get_plot_latlng(points_aftertrip_js);
+get_summary_latlng(points_aftertrip_js)
 </script>
 
 <!--

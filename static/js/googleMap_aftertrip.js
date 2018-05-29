@@ -121,6 +121,39 @@ function summary_of_the_day(pt){
     return(text)
 }
 
+function get_summary_latlng(points_aftertrip){
+    var dist_m = 0;
+    var alt_m_net = 0;
+    var alt_gain = 0;
+    var alt_loss = 0;
+    if (points_aftertrip.length > 6000){
+    // calculate the duration of the entire trip
+        for (i = 0; i < points_aftertrip.length ;i++){
+            pt = points_aftertrip[i]
+            dist_m += pt["dist"]
+            if (i > 0){
+                diff = pt["alt"] - points_aftertrip[i-1]["alt"];
+                alt_m_net += diff
+                if (diff > 0){
+                    alt_gain  += diff
+                }else{
+                    alt_loss  -= diff
+                }
+            }
+        }
+        text  = "<h2>Overall trip</h2>"
+        text += "<ul> "
+        text += "<li>Total ascent: " + m2feet(alt_gain) + "</li>"
+        text += "<li>Total descent: " + m2feet(alt_loss) + "</li>"
+        text += "<li>Total distance: " + m2feet(dist_m*1000) + "</li>"
+        text += "</ul>"
+     }else{
+        text = summary_of_the_day(points_aftertrip[0])
+     }
+
+    document.getElementById("get_summary_latlng").innerHTML = text
+}
+
 function m2feet(p,unit="m"){
     if (unit == "km"){
         p *= 1000
